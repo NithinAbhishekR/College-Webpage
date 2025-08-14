@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="./collegeHomePage.css" />
+        <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-9aIt2nRpC12Uk9g1iLAziA/8ogVgaI4GzD5D5rj6niZ5wL2p1U6Jd70b8XHf4NkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel ="stylesheet" href="upload.css">
+        <link rel="stylesheet" href="upload.js">
+        <link rel="stylesheet" href="placement-prep.css">
+    </head>
+
+    <div class="center-container" id="mainLoginContainer">
+        <div class="login-container text-center"  style="width:50vh;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Itechlogo.png/738px-Itechlogo.png?20180323093554"
+                alt="College Logo" style="" class="logo mb-2">
+            <p style="color:#7c7d99;">Department of EEE</p>
+            <h1>Login</h1>
+            <div class="login-buttons">
+                <button id="staffBtn">Staff Login</button>
+                <button id="studentBtn">Student Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-container" id="staffLoginContainer">
+        <div class="login-container text-center"  style="width:50vh;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Itechlogo.png/738px-Itechlogo.png?20180323093554"
+                alt="College Logo" style="" class="logo mb-2">
+            <p style="color:#7c7d99;">Department of EEE</p>
+            <h1 style="font-size:30px; font-weight:bold;">Login</h1>
+            <form id="myForm" class="text-left">
+                <div class="mb-3">
+                <label for="userId" style="font-weight:bold;">UserId</label>
+                <input type="text" class="form-control" id="userId" placeholder="Please Enter your Id" />
+                <p id="userIdErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                <label for="password" style="font-weight:bold;">Password</label>
+                <input type="password" class="form-control" id="userPassword" placeholder="Please Enter Your Password" />
+                <p id="passWordErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" id="loginBtn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="uploadContainer">
+        <div class="file-upload-container">
+            <form>
+                <h2>Upload a File</h2>
+                <input type="file" id="fileInput" accept="image/*,video/*,audio/*,application/pdf" />
+                <button class="btn btn-primary">Upload</button>
+                <div class="preview-container" id="previewContainer"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="placement-prep-container" id="itContainer">
+        <div class="sidebar">
+            <h2>Placement Prep</h2>
+            <button class="toggle-btn">➤</button>
+            <div class="nav-item">
+                <div class="title">Programming</div>
+                <div class="dropdown">
+                    <a href="#" data-topic="c">C</a>
+                    <a href="#" data-topic="c++">C++</a>
+                    <a href="#" data-topic="py">Python</a>
+                    <a href="#" data-topic="dsa">Data Structure and Algorithm</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="title">CS Fundamentals</div>
+                <div class="dropdown">
+                    <a href="#" data-topic="dbms">DBMS</a>
+                    <a href="#" data-topic="os">Operating Systems</a>
+                    <a href="#" data-topic="cn">Computer Networks</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content">
+            <h1>Select a Topic</h1>
+            <div id="resource-container"></div>
+        </div>
+    
+        
+    </div>
+
+    <div class="placement-prep-container" id="coreEeeContainer">
+        <div class="sidebar">
+            <h2>Placement Prep</h2>
+            <button class="toggle-btn">➤</button>
+            <div class="nav-item">
+                <div class="title">Core</div>
+                <div class="dropdown">
+                    <a href="#" data-topic="c">Electricals</a>
+                    <a href="#" data-topic="c++">Electronics</a>
+                    <a href="#" data-topic="py">Embedded</a>
+                    <a href="#" data-topic="dsa"></a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="title">Analog VLSI</div>
+                <div class="dropdown">
+                    <a href="#" data-topic="dbms">Electric Circuits</a>
+                    <a href="#" data-topic="os">Electronic Devices and Circuits</a>
+                    <a href="#" data-topic="cn">Linear Integrated Circuits</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content">
+            <h1>Select a Topic</h1>
+            <div id="resource-container"></div>
+        </div>
+    </div> 
+
+    <div id="prepContainer">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Itechlogo.png/738px-Itechlogo.png?20180323093554"
+                class="itech_logo"
+            />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" id="navItem1" href="#wcuSection">
+                    Preparation Categories
+                <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link" href="#interviewSection" id="navItem2">Interview Experiences</a>
+                <a class="nav-link" href="#questionSection" id="navItem3">Company Questions</a>
+                <a class="nav-link" href="#followUsSection" id="navItem4">Follow Us</a>
+            </div>
+            </div>
+        </div>
+        </nav>
+        <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+        <div class="text-center">
+            <h1 class="banner-heading mb-3" style="color:#F5F5DC;">EEE Placement Preparation</h1>
+            <p class="banner-caption mb-4" style="color:#F5F5DC;">
+                Your comprehensive guide to placement preparation. <br/>Access interview experiences, practice questions, and study materials all in one place.
+            </p>
+            <button class="custom-button">Get Started</button>
+        </div>
+        </div>
+        <div class="cat-section pt-5 pb-5" id="wcuSection">
+        <div class="container">
+            <div class="row">
+            <div class="col-12">
+                <h1 class="cat-section-heading">Preparation Categories</h1>
+                <p class="cat-section-description">
+                    Master Core EEE, IT, and Aptitude with tailored resources to ace your placements and land your dream job!
+                </p>
+            </div>
+            <div class="col-12 col-md-4" id="coreEEE">
+                <div class="cat-card p-3 mb-3">
+                <i class="fa-regular fa-lightbulb fa-4x"></i>
+                <h1 class="cat-card-title mt-3">Core EEE</h1>
+                <p class="cat-card-description">
+                    Power System, Control System, Electrical Machines and more.
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" id="it">
+                <div class="cat-card p-3 mb-3">
+                <!--<img
+                    src="./images/fruits-img.png"
+                    class="cat-card-image"
+                />-->
+                <i class="fa-solid fa-computer fa-4x"></i>
+                <h1 class="cat-card-title mt-3">Information Technology</h1>
+                <p class="cat-card-description">
+                    Programming, data structures, web development fundamentals
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="cat-card p-3 mb-3">
+                <!--<img
+                    src="./images/offers-img.png"
+                    class="cat-card-image"
+                />-->
+                <i class="fa-solid fa-brain fa-4x"></i>
+                <h1 class="cat-card-title mt-3">Aptitude</h1>
+                <p class="cat-card-description">
+                    Quantitative, logical reasoning and verbal ability
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="interview-section pt-4 pb-5" id="interviewSection">
+        <div class="container">
+            <div class="row">
+            <div class="col-12 mb-3">
+                <h1 class="interview-section-heading">Interview Experiences</h1>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">ABB</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    ABHIJIT S S - GRADUATE ENGINEER
+                    TRAINEE (2023)
+                </p>
+                <p>
+                    The interview process was comprehensive, assessing both technical competence
+                    and interpersonal skills. Each round provided a unique set of challenges, requiring
+                    preparation and adaptability
+                </p>
+                <!--<a href="" class="interview-item-link">
+                    View All
+                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                    </svg>
+                </a>-->
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">
+                        HINDUJA RENEWABLES
+                    </h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    ABINIVESH S - GRADUATE ENGINEER
+                    TRAINEE (2023)
+                </p>
+                <p>
+                    Hinduja Renewables was one of my dream companies, and here's an account of my
+                    journey through their interview process. The process had three rounds: Multiple
+                    Choice Questions (MCQs), Group Discussion (GD), and Interview.
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">VA TECH WABAG</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    ADERAI T L - GRADUATE ENGINEER
+                    TRAINEE (2023)
+                </p>
+                <p>
+                    VA Tech Wabag is a leading water technology company. Here's a
+                    comprehensive breakdown of their interview process, including the rounds and my
+                    personal experience.
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">MOBICIP</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    AHAMED NADEEM M - GRADUATE ENGINEER
+                    TRAINEE (2023)
+                </p>
+                <p>
+                    The interview process for Mobicip consisted of four rounds, each designed to evaluate
+                    different skills and competencies. Here is an overview of my experience with this
+                    company's selection process:
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">TECHNIP ENERGIES</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    ANUKEERTHANA S - GRADUATE ENGINEER
+                    TRAINEE (2023)
+                </p>
+                <p>
+                    Technip Energies is a global engineering and technology company focusing on energy
+                    production and innovation. The interview process consisted of four rounds: an online
+                    test, two technical interviews, and an HR interview. Here's an overview of each stage:
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">CATERPILLAR</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    ARIFA NISHMA M - ASSOCIATE ENGINEER (2023)
+                </p>
+                <p>
+                    Caterpillar conducted a three-round interview process for the role of Associate
+                    Engineer. The first round was an online multiple-choice question (MCQ) test, held on
+                    July 30, 2023, followed by a group discussion and a techno-managerial round on
+                    August 8, 2023.
+
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">ASHOK LEYLAND</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    CHANDRIKA R - ASSOCIATE ENGINEER (2023)
+                </p>
+                <p>
+                    The interview process for Ashok Leyland had five rounds, each designed to test
+                    different skills and attributes. Here's a breakdown of the process:
+                </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow interview-item-card p-3 mb-3">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-regular fa-building fa-2x"></i>
+                    <h1 class="interview-card-title">CATERPILLAR</h1>
+                </div>
+                <p style="color:#9ea7b0; font-family:Roboto;">
+                    DEVASHRI V - ASSOCIATE ENGINEER (2023)
+                </p>
+                <p>
+                    If you're looking to get into Caterpillar, one of the leading companies in heavy machinery,
+                    here's a detailed breakdown of my interview experience. The entire process was
+                    structured into three main stages:
+                    <ul>
+                        <li>1. Multiple Choice Questions</li>
+                        <li>2. Group Discussion</li>
+                        <li>3. Interview</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            </div>
+            <div>
+                <button class="custom-button">Know More</button>
+            </div>
+        </div>
+        </div>
+        <div class="question-section pt-5 pb-5" id="questionSection">
+            <div class="container">
+                <div class="row">
+                <div class="col-12 mb-3">
+                    <h1 class="interview-section-heading">Company Questions</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow question-item-card p-3 mb-2">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-regular fa-building fa-2x"></i>
+                        <h1 class="interview-card-title">ABB</h1>
+                    </div>
+                    
+                        <ul>
+                            <li>What could be an alternate title for your project, and why?</li>
+                            <li>What would you do if your team's mindset didn't align with your actions?</li>
+                        </ul>
+                    
+                    <a href="" class="interview-item-link">
+                        View More
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#34437b" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        />
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow question-item-card p-3 mb-3">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-regular fa-building fa-2x"></i>
+                        <h1 class="interview-card-title">HINDUJA
+                            RENEWABLES</h1>
+                    </div>
+                    <p class="mb-3">
+                        <ul>
+                            <li>What do you know about ON/OFF grid systems?</li>
+                            <li>Draw a SEPIC Converter with Voltage and Current waveforms.</li>
+                            <!--<li>. 
+                                Explain Pulse Width
+                                Modulation (PWM) and how you generated PWM in your project.
+                            </li>-->
+                        </ul>
+                    </p>
+                    <a href="" class="interview-item-link">
+                        View More
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#34437b" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        />
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow question-item-card p-3 mb-3">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-regular fa-building fa-2x"></i>
+                        <h1 class="interview-card-title">MOBICIP</h1>
+                    </div>
+                    <p>
+                        <ul>
+                            <li>What is a dangling pointer? Explain with a simple program</li>
+                            <li>What's the difference between structure and union? Provide examples.</li>
+                        </ul>
+                    </p>
+                    <a href="" class="interview-item-link">
+                        View More
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#34437b" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        />
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow question-item-card p-3 mb-3">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-regular fa-building fa-2x"></i>
+                        <h1 class="interview-card-title">CATERPILLAR</h1>
+                    </div>
+                    <p>
+                        <ul>
+                            <li>What is a const function?</li>
+                            <li>What are pointers?</li>
+                            <li>What's the difference between malloc, calloc, and realloc?</li>
+                        </ul>
+                    </p>
+                    <a href="" class="interview-item-link">
+                        View More
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#34437b" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        />
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+                </div>
+                <div class="mt-3">
+                    <button class="custom-button">Know More</button>
+                </div>
+            </div>
+        </div>
+        <div class="thankyou-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+            <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                <h1 class="thankyou-section-heading">
+                Thank you for using this resource.
+                </h1>
+                <p class="thankyou-section-description">
+                We would love your feedback.
+                </p>
+                <div class="d-md-none">
+                <img
+                    src="https://www.kindpng.com/picc/m/5-51592_transparent-background-emoji-png-png-download.png"
+                    class="thankyou-section-img"
+                />
+                </div>
+                <div>
+                <button type="button" class="custom-feedback-button" data-toggle="modal" data-target="#exampleModal">
+                    Submit Feedback
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+        <div class="container">
+            <div class="row">
+            <div class="col-12">
+                <h1 class="follow-us-section-heading">Follow Us</h1>
+            </div>
+            <div class="col-12">
+                <div class="d-flex flex-row justify-content-center">
+                <div class="follow-us-icon-container">
+                    <i class="fab fa-twitter icon"></i>
+                </div>
+                <div class="follow-us-icon-container">
+                    <i class="fab fa-instagram icon"></i>
+                </div>
+                <div class="follow-us-icon-container">
+                    <i class="fab fa-facebook icon"></i>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+            <div class="col-12 text-center">
+                <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Itechlogo.png/738px-Itechlogo.png?20180323093554"
+                class="itech_logo"
+                />
+                <h1 class="footer-section-mail-id">placement@psgitech.ac.in</h1>
+                <p class="footer-section-address">
+                    Salem, Highway, Avinashi Rd, Coimbatore, Neelambur, Tamil Nadu 641062
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="college_webpage.js"></script>
+    <script src="upload.js"></script>
+    <script src="placement-prep.js"></script>
+</body>
+</html> 
